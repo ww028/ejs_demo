@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <%- include("./js.ejs") %></%->
+</head>
+
+<body>
+  <%- include("../components/header.ejs") %></%->
+  <%= title %>
+  <h3>循环一个列表出来</h3>
+  <ul>
+    <% list.forEach(function(item, index){%>
+    <li class="item item_<%=index %>">
+      <span>姓名：<%=item.name %></span>
+      |
+      <span>年龄：<%=item.age %></span>
+    </li>
+    <% }) %>
+  </ul>
+
+</body>
+
+</html>
